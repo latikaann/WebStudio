@@ -1021,12 +1021,18 @@ section {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   background-color: #FFFFFF;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__close-button {
@@ -1079,8 +1085,12 @@ section {
 .form {
   margin-left: auto;
   margin-right: auto;
-  width: 448px;
-  /* outline: 1px solid blue; */
+  width: 370px;
+}
+@media screen and (min-width: 1200px) {
+  .form {
+    width: 448px;
+  }
 }
 
 .form__field {
@@ -1198,10 +1208,17 @@ textarea:hover, textarea:focus {
 
 .chek__text,
 .chek__link {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .chek__text,
+.chek__link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .chek__link {
@@ -1231,14 +1248,20 @@ textarea:hover, textarea:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
   margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .portfolio__button {
@@ -1285,6 +1308,22 @@ textarea:hover, textarea:focus {
 
 .portfolio__item {
   background: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .portfolio__item {
+    width: 450px;
+  }
+  .portfolio__item img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .portfolio__item {
+    width: 354px;
+  }
+  .portfolio__item img {
+    width: 100%;
+  }
 }
 
 .portfolio__link {
