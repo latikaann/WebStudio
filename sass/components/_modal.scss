@@ -25,7 +25,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 450px;
+  width: calc(100% - 30px);
   height: 609px;
 
   background-color: $white-color;
@@ -33,6 +33,10 @@
   box-shadow: $modal-and-team-box-shadow;
   border-radius: 4px;
 
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+    height: 609px;
+  }
   @media screen and (min-width: $desktop) {
     width: 528px;
     height: 581px;
@@ -89,7 +93,7 @@
 .form {
   margin-left: auto;
   margin-right: auto;
-  width: 370px;
+  width: 100%;
 
   @media screen and (min-width: $desktop) {
     width: 448px;
@@ -119,7 +123,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
 
   &:hover,
   &:focus {
