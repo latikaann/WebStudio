@@ -120,6 +120,12 @@
   }
 }
 
+.footer__form label {
+  @media screen and (max-width: 479px) {
+    width: 100%;
+  }
+}
+
 .footer__btn {
   display: flex;
   justify-content: center;

@@ -939,6 +939,12 @@ section {
   }
 }
 
+@media screen and (max-width: 479px) {
+  .footer__form label {
+    width: 100%;
+  }
+}
+
 .footer__btn {
   display: -webkit-box;
   display: -ms-flexbox;
