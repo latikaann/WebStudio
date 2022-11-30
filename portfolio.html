@@ -47,14 +47,14 @@
 
           <ul class="site-nav__list">
             <li class="site-nav__item">
-              <a class="site-nav__link" href="./index.html">Студія</a>
-            </li>
-            <li class="site-nav__item">
               <a
                 class="site-nav__link site-nav__link--current"
-                href="./portfolio.html"
-                >Портфоліо</a
+                href="./index.html"
+                >Студія</a
               >
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="site-nav__item">
               <a class="site-nav__link" href="">Контакти</a>
@@ -63,17 +63,25 @@
         </nav>
 
         <ul class="contacts">
-          <li>
+          <li class="contacts__item">
             <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
+              <svg
+                class="contacts__icon contacts__icon--email"
+                width="16"
+                height="12"
+              >
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
-          <li>
+          <li class="contacts__item">
             <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
+              <svg
+                class="contacts__icon contacts__icon--phone"
+                width="10"
+                height="16"
+              >
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -82,6 +90,7 @@
         </ul>
       </div>
     </header>
+
     <main>
       <section class="portfolio">
         <div class="container">
@@ -115,11 +124,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img
-                    src="./images/tehnokryak.jpg"
-                    alt="Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-1_desk.webp    1x,
+                        ./images/portfolio/img-1_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-1_desk.jpg    1x,
+                        ./images/portfolio/img-1_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-1_tab.webp    1x,
+                        ./images/portfolio/img-1_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-1_tab.jpg    1x,
+                        ./images/portfolio/img-1_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-1_mob.webp    1x,
+                        ./images/portfolio/img-1_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-1_mob.jpg    1x,
+                        ./images/portfolio/img-1_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-1_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -141,11 +203,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img
-                    src="./images/poster.jpg"
-                    alt="Гравці баскетболу"
-                    width="370"
-                  />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-2_desk.webp    1x,
+                        ./images/portfolio/img-2_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-2_desk.jpg    1x,
+                        ./images/portfolio/img-2_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-2_tab.webp    1x,
+                        ./images/portfolio/img-2_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-2_tab.jpg    1x,
+                        ./images/portfolio/img-2_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-2_mob.webp    1x,
+                        ./images/portfolio/img-2_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-2_mob.jpg    1x,
+                        ./images/portfolio/img-2_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-2_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -169,11 +284,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img
-                    src="./images/seafood.jpg"
-                    alt="Лого ресторану"
-                    width="370"
-                  />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-3_desk.webp    1x,
+                        ./images/portfolio/img-3_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-3_desk.jpg    1x,
+                        ./images/portfolio/img-3_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-3_tab.webp    1x,
+                        ./images/portfolio/img-3_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-3_tab.jpg    1x,
+                        ./images/portfolio/img-3_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-3_mob.webp    1x,
+                        ./images/portfolio/img-3_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-3_mob.jpg    1x,
+                        ./images/portfolio/img-3_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-3_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -195,7 +363,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img src="./images/prime.jpg" alt="Навушники" width="370" />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-4_desk.webp    1x,
+                        ./images/portfolio/img-4_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-4_desk.jpg    1x,
+                        ./images/portfolio/img-4_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-4_tab.webp    1x,
+                        ./images/portfolio/img-4_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-4_tab.jpg    1x,
+                        ./images/portfolio/img-4_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-4_mob.webp    1x,
+                        ./images/portfolio/img-4_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-4_mob.jpg    1x,
+                        ./images/portfolio/img-4_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-4_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -217,7 +442,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img src="./images/boxes.jpg" alt="Коробки" width="370" />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-5_desk.webp    1x,
+                        ./images/portfolio/img-5_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-5_desk.jpg    1x,
+                        ./images/portfolio/img-5_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-5_tab.webp    1x,
+                        ./images/portfolio/img-5_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-5_tab.jpg    1x,
+                        ./images/portfolio/img-5_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-5_mob.webp    1x,
+                        ./images/portfolio/img-5_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-5_mob.jpg    1x,
+                        ./images/portfolio/img-5_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-5_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -239,8 +521,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img src="./images/noborders.jpg" alt="Монітор" width="370" />
-
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-6_desk.webp    1x,
+                        ./images/portfolio/img-6_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-6_desk.jpg    1x,
+                        ./images/portfolio/img-6_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-6_tab.webp    1x,
+                        ./images/portfolio/img-6_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-6_tab.jpg    1x,
+                        ./images/portfolio/img-6_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-6_mob.webp    1x,
+                        ./images/portfolio/img-6_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-6_mob.jpg    1x,
+                        ./images/portfolio/img-6_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-6_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay__text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем
@@ -261,11 +599,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img
-                    src="./images/limitededition.jpg"
-                    alt="Книга"
-                    width="370"
-                  />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-7_desk.webp    1x,
+                        ./images/portfolio/img-7_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-7_desk.jpg    1x,
+                        ./images/portfolio/img-7_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-7_tab.webp    1x,
+                        ./images/portfolio/img-7_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-7_tab.jpg    1x,
+                        ./images/portfolio/img-7_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-7_mob.webp    1x,
+                        ./images/portfolio/img-7_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-7_mob.jpg    1x,
+                        ./images/portfolio/img-7_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-7_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -287,7 +678,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img src="./images/lab.jpg" alt="Бірка" width="370" />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-8_desk.webp    1x,
+                        ./images/portfolio/img-8_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-8_desk.jpg    1x,
+                        ./images/portfolio/img-8_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-8_tab.webp    1x,
+                        ./images/portfolio/img-8_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-8_tab.jpg    1x,
+                        ./images/portfolio/img-8_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-8_mob.webp    1x,
+                        ./images/portfolio/img-8_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-8_mob.jpg    1x,
+                        ./images/portfolio/img-8_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-8_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">
@@ -309,11 +757,64 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="#">
                 <div class="card-thumb">
-                  <img
-                    src="./images/growingbusiness.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                  />
+                  <picture>
+                    <!-- desktop -->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-9_desk.webp    1x,
+                        ./images/portfolio/img-9_desk@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/img-9_desk.jpg    1x,
+                        ./images/portfolio/img-9_desk@2x.jpg 2x
+                      "
+                    />
+                    <!-- tablet -->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-9_tab.webp    1x,
+                        ./images/portfolio/img-9_tab@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/img-9_tab.jpg    1x,
+                        ./images/portfolio/img-9_tab@2x.jpg 2x
+                      "
+                    />
+                    <!-- mobile -->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-9_mob.webp    1x,
+                        ./images/portfolio/img-9_mob@2x.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/img-9_mob.jpg    1x,
+                        ./images/portfolio/img-9_mob@2x.jpg 2x
+                      "
+                    />
+                    <!-- default -->
+                    <img
+                      class=""
+                      src="./images/portfolio/img-9_mob.jpg"
+                      width="450"
+                      height="294"
+                      loading="lazy"
+                    />
+                  </picture>
 
                   <div class="overlay">
                     <p class="overlay__text">

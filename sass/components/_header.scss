@@ -89,10 +89,8 @@
     padding-top: 21px;
     padding-bottom: 21px;
 
-    .contacts__item {
-      &:not(:last-child) {
-        margin-bottom: 10px;
-      }
+    .contacts__item:not(:last-child) {
+      margin-bottom: 10px;
     }
   }
 }
